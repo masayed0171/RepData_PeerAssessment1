@@ -108,7 +108,7 @@ total_steps <- aggregate(steps ~ date, activity, sum)
 hist(total_steps$steps, xlab="Number of Steps", ylab="Frequency",col="grey",border="blue", main="Total number of steps taken each day")
 ```
 
-![](PA_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA_Template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 #### Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -133,7 +133,7 @@ steps_interval <- aggregate(steps ~ interval, activity, mean)
 plot(steps_interval$interval,steps_interval$steps, type="l", xlab="Time Interval", ylab="Average Number of Steps",main="Average Number of Steps per Day by 5-minute Interval")
 ```
 
-![](PA_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA_Template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 #### The 5-minute interval on average across all the days in the dataset that contains the maximum number of steps are shown below.
 
@@ -185,14 +185,14 @@ hist(StepsTotal$steps, xlab="Number of steps",ylab="Frequency",
      main="Data filled in NA",border='grey',col="blue")
 ```
 
-![](PA_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](PA_Template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ```r
 hist(total_steps$steps, xlab="Number of steps",ylab="Frequency",
      main="Data not filled in NA",border='blue',col="gray",)
 ```
 
-![](PA_template_files/figure-html/unnamed-chunk-13-2.png)<!-- -->
+![](PA_Template_files/figure-html/unnamed-chunk-13-2.png)<!-- -->
 
 #### I calculate the mean and median of the new dataset.
 
@@ -248,6 +248,6 @@ StepsU <- aggregate(steps ~ interval + dow, new_activity, mean)
 xyplot(StepsU$steps ~ StepsU$interval|StepsU$dow, main="Average Number of Steps by Interval",xlab="Intervals", ylab="Number of Steps",layout=c(1,2), type="l")
 ```
 
-![](PA_template_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](PA_Template_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 ## The End of the Report
